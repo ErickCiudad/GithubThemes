@@ -10,17 +10,29 @@ console.log('yooo');
 //    }
 //}
 //document.getElementById('main-content').style.backgroundColor = "red";
+
 var color = false;
 document.body.style.backgroundColor = color;
-var image = false;
-document.body.style.backgroundImage = "url('http://www.hometopia.co.nz/portals/0/lowland%20gorilla,%20africa.jpg')";
-//document.body.style.backgroundImage = image;
+var image = 'https://loseitapp.files.wordpress.com/2014/09/istock_000014459318_double.jpg';
+document.body.style.backgroundImage = "url('" + image + "')";
+document.body.style.backgroundImage = image;
 
+//function showPic(src) {
+//    var img = document.createElement("img");
+//    img.src = src;
+//    img.width = 1000;
+//    img.height = 1000;
+//    img.zIndex = -1000;
+//    img.bottom = -1000;
+//    document.body.appendChild(img);
+//}
+//showPic('https://loseitapp.files.wordpress.com/2014/09/istock_000014459318_double.jpg');
 
 //var div = document.createElement("div");
 //div.style.width = "100%";
 //div.style.height = "100px";
-//div.style.background = "transparent";
+//div.style.background = "white";
+//div.style.backgroundImage = "url('https://loseitapp.files.wordpress.com/2014/09/istock_000014459318_double.jpg')";
 //div.style.color = "black";
 //div.innerHTML = "Hello";
 
@@ -62,6 +74,7 @@ pic.onclick = function () {
     //alert("Success");
     image = prompt('Put in a url');
     document.body.appendChild(div);
+    document.body.style.backgroundImage.url = (image);
 };
 
 
@@ -69,8 +82,11 @@ pic.onclick = function () {
 function checkColor()
 {
     document.body.style.backgroundColor = color;
+
     //document.body.style.backgroundImage.src = image;
 
 }
 
 setInterval(checkColor, 200);
+
+
